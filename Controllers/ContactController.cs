@@ -11,43 +11,24 @@ namespace webapi_test_3.Controllers
 {
     public class ContactController : ApiController
     {
-        Item[] items = new Item[]{
-            new Item{
-                        id = "a",
-                        type = "phone number",
-                        value = "555-123-456"
-                    }, new Item{
-                        id = "b",
-                        type = "email",
-                        value = "kyawtun@yathit.com"
-                    }, new Item{
-                        id = "c",
-                        type = "blog",
-                        value = "http://www.yathit.com"
-                    }, new Item{
-                        id = "d",
-                        type = "fax",
-                        value = "555-999-9999"
-                    }, new Item{
-                        id = "e",
-                        type = "full name",
-                        value = "Kyaw Tun"
-                    }
-        };
-
+     
         Contact[] contacts = new Contact[]{
             new Contact{
                 id = 1,
                 name = "Alace",
-                itemIds = new String[]{"a", "b"}
+                itemIds = new String[]{"aa", "ab", "ac", "ad", "ae"}
             },  new Contact{
                 id = 2,
                 name = "Bob",
-                itemIds = new String[]{"c", "d"}
+                itemIds = new String[]{"ba", "bb", "bc", "bd", "be"}
             },  new Contact{
-                id = 5,
+                id = 3,
                 name = "Kyaw",
-                itemIds = new String[]{"e"}
+                itemIds = new String[]{"ka", "kb", "kc", "kd", "ke"}
+            },  new Contact{
+                id = 4,
+                name = "Tun",
+                itemIds = new String[]{"ta", "tb", "tc", "td", "te"}
             }
         };
 
@@ -64,9 +45,7 @@ namespace webapi_test_3.Controllers
             {
                 return NotFound();
             }
-            contact.items = items.Where((p) => contact.itemIds.Contains(p.id)).ToArray();
-            
-            Thread.Sleep(id * 1000);
+        
             return Ok(contact);
         }
     }

@@ -13,11 +13,5 @@ namespace webapi_test_3.Models
         public string[] itemIds { get; set; }
     }
 
-    public class Item
-    {
-        public string id { get; set; }
-        public string type { get; set; }
-        public string value { get; set; }
-    }
 
 }
