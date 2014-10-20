@@ -16,19 +16,19 @@ namespace webapi_test_3.Controllers
             new Contact{
                 id = 1,
                 name = "Alace",
-                itemIds = new String[]{"aa", "ab", "ac", "ad", "ae"}
+                itemIds = new String[]{"alace-a", "alace-b", "alace-c", "alace-d", "alace-e"}
             },  new Contact{
                 id = 2,
                 name = "Bob",
-                itemIds = new String[]{"ba", "bb", "bc", "bd", "be"}
+                itemIds = new String[]{"bob-a", "bob-b", "bob-c", "bob-d", "bob-e"}
             },  new Contact{
                 id = 3,
                 name = "Kyaw",
-                itemIds = new String[]{"ka", "kb", "kc", "kd", "ke"}
+                itemIds = new String[]{"kyaw-a", "kyaw-b", "kyaw-c", "kyaw-d", "kyaw-e"}
             },  new Contact{
                 id = 4,
                 name = "Tun",
-                itemIds = new String[]{"ta", "tb", "tc", "td", "te"}
+                itemIds = new String[]{"tun-a", "tun-b", "tun-c", "tun-d", "tun-e"}
             }
         };
 

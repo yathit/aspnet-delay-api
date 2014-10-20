@@ -14,8 +14,8 @@ namespace webapi_test_3.Controllers
         Item[] items = new Item[]{
             new Item{
                         id = "a",
-                        type = "phone number",
-                        value = "555-123-456"
+                        type = "full name",
+                        value = "Alace"
                     }, new Item{
                         id = "b",
                         type = "email",
@@ -30,8 +30,8 @@ namespace webapi_test_3.Controllers
                         value = "555-999-9999"
                     }, new Item{
                         id = "e",
-                        type = "full name",
-                        value = "Kyaw Tun"
+                        type = "phone",
+                        value = "999-111-3333"
                     }, new Item{
                         id = "f",
                         type = "phone",
@@ -53,15 +53,27 @@ namespace webapi_test_3.Controllers
 
         public IHttpActionResult GetItem(String id)
         {
-            var contact = items.FirstOrDefault((p) => id.EndsWith(p.id));
-            if (contact == null)
+            var item = items.FirstOrDefault((p) => id.EndsWith(p.id));
+            if (item == null)
             {
                 return NotFound();
+            }
+            if (id == "bob-a")
+            {
+                item.value = "Bob";
+            }
+            if (id == "kyaw-a")
+            {
+                item.value = "Kyaw";
+            }
+            if (id == "tun-a")
+            {
+                item.value = "Tun";
             }
 
             int t = (int) (10000 * rand.NextDouble());
             Thread.Sleep(t);
-            return Ok(contact);
+            return Ok(item);
         }
     }
 }
